@@ -76,7 +76,6 @@
     <p style="text-align:center;font-size:30pt;" id="grad">
       Choose a country to display its 10 largest cities and their populations: 
     </p>
-
     <div id="id">
       <select id="cities" onchange="readFile()">
         <option value="usa.txt">USA</option>
