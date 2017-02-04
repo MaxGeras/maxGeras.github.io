@@ -1,6 +1,9 @@
-<!DOCTYPE>
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Week 10 CIT 261</title>
+      <style>
     select{
     background-color: red;
     background-position:300px;
@@ -64,9 +67,9 @@
     background: linear-gradient(red, yellow); /* Standard syntax */
     }
   </style>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Week 10 Ponder and Prove</title>
+    
+    
+    
     <script type="text/javascript" src="script.js"></script> 
   </head>
   
