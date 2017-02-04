@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Week 10 CIT 261</title>
       <style>
     select{
@@ -68,8 +67,6 @@
     }
   </style>
     
-    
-    
     <script type="text/javascript" src="script.js"></script> 
   </head>
   
@@ -88,7 +85,7 @@
         <option value="canada.txt">Canada</option>
      </select>
      <pre id="result"></pre>
-    <div>
+    </div>
       
     <input type="text" name="file" id="json" value="json.txt">
     <input type="button" class="b" value="Display" onclick="readJsonFile()">
