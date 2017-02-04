@@ -69,6 +69,7 @@
     <title>Week 10 Ponder and Prove</title>
     <script type="text/javascript" src="script.js"></script> 
   </head>
+  
   <body style="background-color:#87CEFA;" onload="readFile()">
 
     <h1 style="text-align:center;">Assignment #10</h1>
