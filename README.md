@@ -89,7 +89,7 @@
       
     <input type="text" name="file" id="json" value="json.txt">
     <input type="button" class="b" value="Display" onclick="readJsonFile()">
-    <pre id="output"></pre>
+    <pre id="output"></pre> 
           
    </body>
 </html>
