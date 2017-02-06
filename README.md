@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Week 10 CIT 261</title>
+    <title> CIT 261</title>
       <style>
     select{
     background-color: red;
@@ -74,7 +74,7 @@
 
     <h1 style="text-align:center;">CIT 261</h1>
     <p style="text-align:center;font-size:30pt;" id="grad">
-      Choose a country to display its 10 largest cities and their populations: 
+      Read a txt file and json.txt file.
     </p>
     <div id="id">
       <select id="cities" onchange="readFile()">
