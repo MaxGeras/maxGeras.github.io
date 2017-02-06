@@ -79,9 +79,11 @@
 	 <p style="text-align:center;font-size:30pt;" id="grad">
        <a href="week10.html">Parse json and txt files </a>
     </p>
-	 <p style="text-align:center;font-size:30pt;" id="grad">
+    <p style="text-align:center;font-size:30pt;" id="grad">
        <a href="week10.html"> Using XMLHTTPRequest to Consume a JSON Web Service</a>
     </p>
-          
+           <p style="text-align:center;font-size:30pt;" id="grad">
+       <a href="week13a.html">Canvas</a>
+    </p>
    </body>
 </html>
