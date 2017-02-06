@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="node_modules/chart.js/Chart.min.js"></script>
+<script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+<style>
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+  
+  h1 {
+  color: black;
+  font-size: 250%;
+  font-weight: 2000;
+  letter-spacing: 2px;
+  }
+  html{
+  background: url(http://cdn.wallpapersafari.com/36/25/O1P2Wb.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+
+</style>
+</head>
+<body ng-app="myApp" style="text-align:center;">
+
+<h1 >World War 2: Death Toll</h1>
+<p><a href="#/">Click on a country</a></p>
+
+<a href="#london">Great Britain</a>
+<a href="#france">France</a>
+<a href="#germany">Germany</a>
+<a href="#italy">Italy</a>
+<a href="#usa">USA</a>
+<hr>
+<p style="color:green; font-weight: 900;"> Over 150 of the modern countries were 
+  directly or indirectly fighting the war.</p>
+
+<div ng-view></div>
+
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.htm",
+    })
+    .when("/london", {
+        templateUrl : "london.htm",
+        controller : "londonCtrl"
+    })
+    .when("/france", {
+    templateUrl : "france.htm", 
+    controller : "franceCtrl"
+    })
+    .when("/germany", {
+    templateUrl : "germany.htm",
+    controller : "germanyCtrl"
+    })
+    .when("/italy", {
+    templateUrl : "italy.htm",
+    controller : "italyCtrl"
+    })
+    .when("/usa", {
+    templateUrl : "usa.htm",
+    controller : "usaCtrl"
+    })
+
+});
+
+
+</script>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t8dPs26_oyU?autoplay=1" 
+        frameborder="0" allowfullscreen></iframe>
+
+<br>
+<hr>
+<a href="week13a.html">Chart Events</a>
+
+
+</body>
+</html>
