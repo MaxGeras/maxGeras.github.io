@@ -72,7 +72,7 @@
   
   <body style="background-color:#87CEFA;" onload="readFile()">
 
-    <h1 style="text-align:center;">Assignment #10</h1>
+    <h1 style="text-align:center;">CIT 261</h1>
     <p style="text-align:center;font-size:30pt;" id="grad">
       Choose a country to display its 10 largest cities and their populations: 
     </p>
