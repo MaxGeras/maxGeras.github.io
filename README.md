@@ -70,25 +70,18 @@
     <script type="text/javascript" src="script.js"></script> 
   </head>
   
-  <body style="background-color:#87CEFA;" onload="readFile()">
+  <body style="background-color:#87CEFA;" >
 
-    <h1 style="text-align:center;">CIT 261</h1>
+   <h1 style="text-align:center;">CIT 261</h1>
     <p style="text-align:center;font-size:30pt;" id="grad">
-      Read a txt file and json.txt files.
+       <a href="week10.html">Creating CSS3</a>
     </p>
-    <div id="id">
-      <select id="cities" onchange="readFile()">
-        <option value="usa.txt">USA</option>
-        <option value="mexico.txt">Mexico</option>
-        <option value="russia.txt">Russia</option>
-        <option value="canada.txt">Canada</option>
-     </select>
-     <pre id="result"></pre>
-    </div>
-      
-    <input type="text" name="file" id="json" value="json.txt">
-    <input type="button" class="b" value="Display" onclick="readJsonFile()">
-    <pre id="output"></pre> 
+	 <p style="text-align:center;font-size:30pt;" id="grad">
+       <a href="week10.html">Parse json and txt files </a>
+    </p>
+	 <p style="text-align:center;font-size:30pt;" id="grad">
+       <a href="week10.html"> Using XMLHTTPRequest to Consume a JSON Web Service</a>
+    </p>
           
    </body>
 </html>
