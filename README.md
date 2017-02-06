@@ -74,7 +74,7 @@
 
     <h1 style="text-align:center;">CIT 261</h1>
     <p style="text-align:center;font-size:30pt;" id="grad">
-      Read a txt file and json.txt file.
+      Read a txt file and json.txt files.
     </p>
     <div id="id">
       <select id="cities" onchange="readFile()">
