@@ -85,5 +85,5 @@ function myFunction(myJson){
     }
 	
     localStorage.setItem("input", "Heloo");
-    document.getElementById("output").innerHTML = localStorage.getItem("input")  + str ;    
+    document.getElementById("output").innerHTML = str;    
 }
