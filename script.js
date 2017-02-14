@@ -83,6 +83,7 @@ function myFunction(myJson){
             + myJson.students[i].gpa + "\n";  
        i++; 
     }
+	
     localStorage.setItem("input", "Heloo");
-    document.getElementById("output").innerHTML = localStorage.getItem("input");    
+    document.getElementById("output").innerHTML = localStorage.getItem("input")  + str ;    
 }
