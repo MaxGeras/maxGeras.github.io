@@ -74,13 +74,13 @@
 
    <h1 style="text-align:center;">CIT 261</h1>
     <p style="text-align:center;font-size:30pt;" id="grad">
-       <a href="week10.html">Creating CSS3</a>
+       <a href="localStorage.html">Creating CSS3</a>
     </p>
 	 <p style="text-align:center;font-size:30pt;" id="grad">
-       <a href="week10.html">Parse json and txt files </a>
+       <a href="localStorage.html">Parse json and txt files </a>
     </p>
     <p style="text-align:center;font-size:30pt;" id="grad">
-       <a href="week10.html"> Using XMLHTTPRequest to Consume a JSON Web Service</a>
+       <a href="localStorage.html"> Using XMLHTTPRequest to Consume a JSON Web Service</a>
     </p>
            <p style="text-align:center;font-size:30pt;" id="grad">
        <a href="week13.html">HTML5 Tags - Video, Audio, Canvas, etc.</a>
