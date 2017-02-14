@@ -85,5 +85,9 @@
            <p style="text-align:center;font-size:30pt;" id="grad">
        <a href="week13.html">HTML5 Tags - Video, Audio, Canvas, etc.</a>
     </p>
+    
+       <p style="text-align:center;font-size:30pt;" id="grad">
+       <a href="animation.html">Creating CSS3 Transitions and Animations in CSS.</a>
+    </p>
    </body>
 </html>
