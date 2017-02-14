@@ -71,7 +71,6 @@ function myFunction(myJson){
     var str ="";
     var i = 0;
     var students = [];
-    str = "|  Student's name  |     Address   |  Major  |  GPA  |\n";
 
     while(i < myJson.students.length){
    
@@ -80,9 +79,9 @@ function myFunction(myJson){
             + myJson.students[i].address.state + " "
             + myJson.students[i].address.zip + " "
             + myJson.students[i].major + " "
-            + myJson.students[i].gpa + "\n";  
-       i++;
-       students[i] = str;    	   
+            + myJson.students[i].gpa + "\n"; 
+             students[i] = str;			
+       i++;   
     }
 	localStorage.setItem("input", students);
 	
