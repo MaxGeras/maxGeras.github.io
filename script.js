@@ -86,10 +86,7 @@ function myFunction(myJson){
        i++;   
     }
 	
+	localStorage.setItem("students",allStudents.concat(students));
 	
-	var combineStudents = allStudents.concat(students);
-	
-	localStorage.setItem("input", combineStudents);
-	
-    document.getElementById("output").innerHTML = localStorage.getItem("input");    
+    document.getElementById("output").innerHTML = localStorage.getItem("students");    
 }
