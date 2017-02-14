@@ -1,3 +1,6 @@
+var allStudents = [];
+
+
 // Read files:  canada.txt, usa.txt, 
 // mexico.txt,and russia.txt
 function readFile(){
@@ -82,7 +85,11 @@ function myFunction(myJson){
           			
        i++;   
     }
-	localStorage.setItem("input", students);
+	
+	
+	var combineStudents = allStudents.concat(students);
+	
+	localStorage.setItem("input", combineStudents);
 	
     document.getElementById("output").innerHTML = localStorage.getItem("input");    
 }
