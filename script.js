@@ -74,7 +74,7 @@ function myFunction(myJson){
     var i = 0;
     var students = [];
 	
-    if (typeof students !== 'undefined' && students !== null)
+    if (localStorage.getItem("students") !== null)
     {			
 		students.push(localStorage.getItem("students"));
 	}	
