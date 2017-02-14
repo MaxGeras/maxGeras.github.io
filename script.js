@@ -68,19 +68,18 @@ function readJsonFile(){
 // Parse Json files
 function myFunction(myJson){
     
-    var str ="";
     var i = 0;
     var student = [];
 
     while(i < myJson.students.length){
    
-        str += myJson.students[i].first + " " + myJson.students[i].last + " "
+        student[i] = myJson.students[i].first + " " + myJson.students[i].last + " "
             + myJson.students[i].address.city + ", "
             + myJson.students[i].address.state + " "
             + myJson.students[i].address.zip + " "
             + myJson.students[i].major + " "
             + myJson.students[i].gpa + "\n"; 
-            student[i] = str;			
+          			
        i++;   
     }
 	localStorage.setItem("input", student);
