@@ -69,11 +69,11 @@ function readJsonFile(){
 function myFunction(myJson){
     
     var i = 0;
-    var student = [];
+    var students = [];
 
     while(i < myJson.students.length){
    
-        student[i] = myJson.students[i].first + " " + myJson.students[i].last + " "
+        students[i] = myJson.students[i].first + " " + myJson.students[i].last + " "
             + myJson.students[i].address.city + ", "
             + myJson.students[i].address.state + " "
             + myJson.students[i].address.zip + " "
@@ -82,7 +82,7 @@ function myFunction(myJson){
           			
        i++;   
     }
-	localStorage.setItem("input", student);
+	localStorage.setItem("input", students);
 	
     document.getElementById("output").innerHTML = localStorage.getItem("input");    
 }
