@@ -73,20 +73,25 @@ function myFunction(myJson){
     
     var i = 0;
     var students = [];
-
+	
+    if (typeof students !== 'undefined' && students !== null)
+    {			
+		students.push(localStorage.getItem("students"));
+	}	
+	
     while(i < myJson.students.length){
    
-        students[i] = myJson.students[i].first + " " + myJson.students[i].last + " "
+        students.push(myJson.students[i].first + " " + myJson.students[i].last + " "
             + myJson.students[i].address.city + ", "
             + myJson.students[i].address.state + " "
             + myJson.students[i].address.zip + " "
             + myJson.students[i].major + " "
-            + myJson.students[i].gpa + "\n"; 
+            + myJson.students[i].gpa + "\n"); 
           			
        i++;   
     }
 	
-	localStorage.setItem("students",allStudents.concat(students));
+	localStorage.setItem("students",students);
 	
     document.getElementById("output").innerHTML = localStorage.getItem("students");    
 }
