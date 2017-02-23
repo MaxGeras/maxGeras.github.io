@@ -3,6 +3,93 @@
    <head>
       <title>Rollover with a Mouse Events</title>
       <style>
+         #matx{ 
+background: #000;  
+color: rgba(0, 255, 0, .7);  
+width: 100%;  
+height: 800px; 
+font-size: 40px; 
+overflow: hidden;  
+text-shadow: rgba(255, 255, 255, .8) 0px 0px 4px;  
+position: relative;  
+} 
+@-webkit-keyframes fadeing{ 
+0% { opacity: 1; }  
+100% { opacity: 0; }  
+} 
+@-webkit-keyframes falling{ 
+from {top: 250px;}  
+to {top: 388px;}  
+} 
+#matx div{ 
+position: absolute;  
+top: 0;  
+text-transform: lowercase;  
+-webkit-transform:rotate(90deg); 
+-webkit-animation-name: falling, fadeing; 
+-webkit-animation-timing-function: ease-out; 
+-webkit-animation-iteration-count: infinite; 
+-webkit-animation-direction: normal; 
+} 
+.t1{ 
+-webkit-animation-duration: 10s; 
+} 
+.t2{ 
+-webkit-animation-duration: 16s; 
+} 
+.t3{ 
+-webkit-animation-duration: 18s; 
+} 
+.t4{ 
+-webkit-animation-duration: 10s; 
+} 
+.t5{ 
+-webkit-animation-duration: 13s; 
+} 
+.t6{ 
+-webkit-animation-duration: 14s; 
+} 
+.t7{ 
+-webkit-animation-duration: 12s; 
+} 
+.t8{ 
+-webkit-animation-duration: 18s; 
+} 
+.t9{ 
+-webkit-animation-duration: 12s; 
+} 
+.t10{ 
+-webkit-animation-duration: 19s; 
+} 
+.t11{ 
+-webkit-animation-duration: 14s; 
+} 
+.t12{ 
+-webkit-animation-duration: 13s; 
+} 
+.t13{ 
+-webkit-animation-duration: 10s; 
+} 
+.t14{ 
+-webkit-animation-duration: 16s; 
+} 
+.t15{ 
+-webkit-animation-duration: 13s; 
+} 
+.t16{ 
+-webkit-animation-duration: 15s; 
+} 
+.t17{ 
+-webkit-animation-duration: 14s; 
+} 
+.t18{ 
+-webkit-animation-duration: 15s; 
+} 
+.t19{ 
+-webkit-animation-duration: 13s; 
+} 
+.t20{ 
+-webkit-animation-duration: 15s;
 .heart {
   position: relative;
   width: 100px;
