@@ -90,6 +90,8 @@ text-transform: lowercase;
 } 
 .t20{ 
 -webkit-animation-duration: 15s;
+}
+         
 .heart {
   position: relative;
   width: 100px;
@@ -107,6 +109,7 @@ text-transform: lowercase;
   -o-transform-origin: center center;
   transition: all 1s; 
 }
+         
 .heart.css {  
   -webkit-animation-delay:1s;
   -moz-animation-delay:1s;
@@ -239,6 +242,15 @@ function PrefixedEvent(element, type, callback) {
    </head>
    
    <body>
+      <p>Move your mouse over the image to see the result</p>
+      
+      <a href="#" onMouseOver="document.myImage.src=image2.src;" onMouseOut="document.myImage.src=image1.src;">
+      <img name="myImage" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRqtKOtYK68nSSrTiFxU4hLDHy2uTZqQUYzYKc9YEszFlFsSPTS" />
+      </a>
+      
+<h3>With Javascript</h3>
+<div class='heart animated'></div> 
+      
       <div id="matx">  
 <div class="t1" style="left:2px;">123466466546254264526426542654626452452453453453543453 CIT 261</div>  
 <div class="t1" style="left:4px;">1234664665462542626542654626452452453453453543453 CIT 261</div>  
@@ -291,13 +303,6 @@ function PrefixedEvent(element, type, callback) {
 <div class="t7" style="left:620px;">1234664665462 5426552 45245 3453453543453 261</div>  
 <div class="t9" style="left:630px;">1234664665462 5453453 453543453</div> 
          </div>
-      <p>Move your mouse over the image to see the result</p>
       
-      <a href="#" onMouseOver="document.myImage.src=image2.src;" onMouseOut="document.myImage.src=image1.src;">
-      <img name="myImage" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRqtKOtYK68nSSrTiFxU4hLDHy2uTZqQUYzYKc9YEszFlFsSPTS" />
-      </a>
-      
-<h3>With Javascript</h3>
-<div class='heart animated'></div> 
    </body>
 </html>
