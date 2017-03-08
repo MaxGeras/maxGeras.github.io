@@ -88,5 +88,9 @@
        <p style="text-align:center;font-size:30pt;" id="grad">
        <a href="animaJava.html">Creating CSS3 Transitions and Animations in CSS.</a>
     </p>
+    
+       <p style="text-align:center;font-size:30pt;" id="grad">
+       <a href="dom.html">JavaScript HTML DOM Events</a>
+    </p>
    </body>
 </html>
