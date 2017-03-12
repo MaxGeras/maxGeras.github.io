@@ -11,6 +11,13 @@
         -o-background-size: cover;
          background-size: cover;
 	   }
+	   
+	   #myList{
+	   color: yellow;
+	   font-size: 30px;
+	   background-color: grey;
+	   text-align: center;
+	   }
 
 	   #myBtn {
     background-color: DarkSlateGray;
@@ -67,8 +74,22 @@ to add many events on the same button. <br>
 style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
 Click Me</div>
 	
+<ul id="myList">
+  <li>1</li>
+  <li>2</li>
+</ul>
+	<button id="myList" onclick="myCount()">Display Next Number</button>
 <script>
 
+var i = 2;
+function myCount() {
+    i++;
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode(i);
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+}
+s
 function displayDate() {
     document.getElementById("demo").innerHTML = Date();
 }
