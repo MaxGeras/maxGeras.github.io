@@ -64,7 +64,7 @@ to add many events on the same button. <br>
  displayDate()<br>
 </p>
 
-<button id="myBtn">Try it</button>
+<button id="myBtn" >Try it</button>
 
 <p id="demo"></p>
 
@@ -89,10 +89,11 @@ function myCount() {
     node.appendChild(textnode);
     document.getElementById("myList").appendChild(node);
 }
-s
+
 function displayDate() {
     document.getElementById("demo").innerHTML = Date();
 }
+
 
 var x = document.getElementById("myBtn");
 x.addEventListener("mouseover", myFunction);
