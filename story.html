@@ -5,13 +5,31 @@
 </head>
 
 <style type="text/css">
+ html{
+ 	background-color: WhiteSmoke;
+ }
+
+ p{
+ 	color: Orchid;
+ 	font-size: 30px;
+ }
+
+ div{
+ 	color: blue;
+ 	text-align: center;
+ 	font-size: 25px;
+ }
 	.myStory{
 		color: DimGray;
 		text-align: center;
         font-size: 20px;
         margin: auto;
 	}
-</style>>
+
+	.input{
+       text-align: center;
+	}
+</style>
 <script type="text/javascript">
 var res = "";
 
@@ -130,19 +148,19 @@ function resetData()
 Alice </div>
 
 <p id="par" style="visibility:hidden;">Noun : </p> 
-<input type="text" name="noun" id="noun" style="visibility:hidden;"> 
+<input type="text" name="input" id="noun" style="visibility:hidden;"> 
 
 <p id="par1" style="visibility:hidden;">Verb : </p>
- <input type="text" name="verb" id="verb" style="visibility:hidden;">
+ <input type="text" name="input" id="verb" style="visibility:hidden;">
 
 <p id="par2" style="visibility:hidden;">Place : </p> 
-<input type="text" name="place" id="place" style="visibility:hidden;">
+<input type="text" name="input" id="place" style="visibility:hidden;">
 
 <p id="par3" style="visibility:hidden;">Adjective : </p>
- <input type="text" name="adjective" id="adjective" style="visibility:hidden;">
+ <input type="text" name="input" id="adjective" style="visibility:hidden;">
 
 <p id="par4" style="visibility:hidden;">Pronoun : </p> 
-<input type="text" name="pronoun" id="pro" style="visibility:hidden;"><br>
+<input type="text" name="input" id="pro" style="visibility:hidden;"><br>
 
 <button style="visibility:hidden;" id="story" onclick="display()"></button> 
 
