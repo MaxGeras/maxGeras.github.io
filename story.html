@@ -172,12 +172,22 @@ function resetData()
 	document.getElementById("place").value = "";
 	document.getElementById('result').innerHTML = "";
 
+	document.getElementById("noun").style.background = "white";
+	document.getElementById("verb").style.background = "white";
+	document.getElementById("adjective").style.background = "white";
+	document.getElementById("pro").style.background = "white";
+	document.getElementById("place").style.background = "white";
+
 }	
 
 function displayButton(){
 
     document.getElementById("story").style.visibility = "visible";
     document.getElementById("story").innerHTML = "Display";
+}
+
+function myFunction1(elementId){
+	 elementId.style.background = "yellow";
 }
 </script>
 
@@ -191,19 +201,19 @@ function displayButton(){
 Alice </div>
 
 <p id="par" style="visibility:hidden;">Noun : </p> 
-<input type="text" name="input" id="noun" style="visibility:hidden;" required > 
+<input type="text" name="input" id="noun" onfocus="myFunction1(this)" style="visibility:hidden;" required > 
 
 <p id="par1" style="visibility:hidden;">Verb : </p>
- <input type="text" name="input" id="verb" style="visibility:hidden;" required>
+ <input type="text" name="input" id="verb" onfocus="myFunction1(this)" style="visibility:hidden;" required>
 
 <p id="par2" style="visibility:hidden;">Place : </p> 
-<input type="text" name="input" id="place" style="visibility:hidden;" required>
+<input type="text" name="input" id="place" onfocus="myFunction1(this)" style="visibility:hidden;" required>
 
 <p id="par3" style="visibility:hidden;">Adjective : </p>
- <input type="text" name="input" id="adjective" style="visibility:hidden;" required>
+ <input type="text" name="input" id="adjective" onfocus="myFunction1(this)" style="visibility:hidden;" required>
 
 <p id="par4" style="visibility:hidden;">Pronoun : </p> 
-<input type="text" name="input" id="pro" style="visibility:hidden;" oninput="displayButton()" required><br>
+<input type="text" name="input" id="pro" style="visibility:hidden;" onfocus="myFunction1(this)" oninput="displayButton()" required><br>
 
 <button class="button button2" style="visibility:hidden;" id="story" onclick="display()"></button> 
 
