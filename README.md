@@ -92,5 +92,9 @@
        <p style="text-align:center;font-size:30pt;" id="grad">
        <a href="dom.html">JavaScript HTML DOM Events</a>
     </p>
+    
+       <p style="text-align:center;font-size:30pt;" id="grad">
+       <a href="story.html">Story Demo</a>
+    </p>
    </body>
 </html>
