@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Story</title>
+</head>
+<script type="text/javascript">
+
+function readFile(elementId){
+
+    var xmlhttp;
+
+    if(window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+    }else{
+        smlhttp = new ActiveXobject("Microsoft.XMLHTTP");
+    }
+    
+   
+    var text = document.getElementById(elementId);
+
+    xmlhttp.onreadystatechange = function(){ 
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+            document.getElementById('result').innerHTML = xmlhttp.responseText;
+        }
+    }
+    
+    xmlhttp.open("GET", text,true);
+    xmlhttp.send();
+
+}
+
+           function ChangeColor(elementId)
+           {
+
+           			document.getElementById(elementId).style.background = "Navy";
+  					document.getElementById(elementId).style.color = "White";
+
+           }
+
+           function changeBack(elementId)
+           {
+      
+           			document.getElementById(elementId).style.background = "lightgrey";
+  					document.getElementById(elementId).style.color = "Black";
+     
+           }
+
+	function mDown(obj) {
+   		   	   obj.style.backgroundColor = "Green";
+    		   
+			}
+
+			function mUp(obj) {
+    			obj.style.backgroundColor="DarkBlue";
+ 
+            }
+	
+</script>
+<body>
+<h1>Welcome to my story</h1>
+<p>Choose a story : </p>
+<div onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" id="albert" value="alber.txt" onclick="readFile(this.id)" 
+>Albert Einstein</div>
+<div id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
+Alice </div>
+
+<div id="result"><div>
+
+</body>
+</html>
