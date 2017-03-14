@@ -44,7 +44,18 @@ function readFile(elementId){
 }
 function replace(myStory)
 {
-	document.getElementById('result').innerHTML = myStory;
+	 var noun = document.getElementById("noun").value;
+	 var verb = document.getElementById("verb").value;
+	 var adjective = document.getElementById("adjective").value;
+	 var pronoun = document.getElementById("pronoun").value;
+	 var place = document.getElementById("place").value;
+
+	 var res = str.replace("noun", noun);
+	 res = str.replace("verb", verb);
+	 res = str.replace("adjective", adjective);
+	 res = str.replace("pronoun", pronoun);
+	 res = str.replace("place", place);
+	document.getElementById('result').innerHTML = res;
 }
 
 function ChangeColor(elementId)
