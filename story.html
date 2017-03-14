@@ -10,14 +10,19 @@
  }
 
  p{
- 	color: Orchid;
+ 	color: DarkBlue;
  	font-size: 30px;
+ 	font-weight: 700;
  }
 
  div{
  	color: blue;
  	text-align: center;
  	font-size: 25px;
+ }
+
+ .center{
+ 	text-align: center;
  }
 
 .myStory{
@@ -188,14 +193,14 @@ function displayButton(){
 }
 
 function myFunction1(elementId){
-	 elementId.style.background = "yellow";
+	 elementId.style.background = "Moccasin";
 }
 </script>
 
 <body>
 
-<h1>Welcome to my story</h1>
-<p>Choose a story : </p>
+<h1 class="center">Welcome to a story</h1>
+<p class="center">Choose your story : </p>
 <div onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" id="albert" value="alber.txt" onclick="readFile(this.id)" 
 >Albert Einstein</div>
 <div id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
