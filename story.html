@@ -83,13 +83,13 @@ function display()
 	var noun = document.getElementById("noun").value;
 	 var verb = document.getElementById("verb").value;
 	 var adjective = document.getElementById("adjective").value;
-	 var pronoun = document.getElementById("pronoun").value;
+	 var proNoun = document.getElementById("proNoun").value;
 	 var place = document.getElementById("place").value; 
 
 	 var myStr = res.replace(/noun/ig, noun)
 					.replace(/verb/ig, verb)
 					.replace(/adjective/ig, adjective)
-	 				.replace(/pronoun/ig, pronoun)
+	 				.replace(/proNoun/ig, proNoun)
 	 				.replace(/place/ig, place);
 
 	document.getElementById('result').innerHTML = myStr;
@@ -120,7 +120,7 @@ Alice </div>
  <input type="text" name="adjective" id="adjective" style="visibility:hidden;">
 
 <p id="par4" style="visibility:hidden;">Pronoun : </p> 
-<input type="text" name="pronoun" id="pronoun" style="visibility:hidden;"><br>
+<input type="text" name="pronoun" id="proNoun" style="visibility:hidden;"><br>
 
 <button style="visibility:hidden;" id="story" onclick="display()"></button> 
 
