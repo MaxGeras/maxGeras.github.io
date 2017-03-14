@@ -46,18 +46,9 @@ function readFile(elementId){
 }
 function replace(myStory)
 {
-	 var noun = document.getElementById("noun").value;
-	 var verb = document.getElementById("verb").value;
-	 var adjective = document.getElementById("adjective").value;
-	 var pronoun = document.getElementById("pronoun").value;
-	 var place = document.getElementById("place").value;
-    
+ 
 	 res = myStory;
-    /*
-	 res = myStory.replace(/noun/ig, noun)
-   				  .replace(/verb/ig, verb)
-   				  .replace(/adjective/ig, adjective);
-      */
+
 
 }
 
@@ -89,8 +80,15 @@ function mUp(obj) {
 
 function display()
 {
-	document.getElementById('result').innerHTML = "Helo world";
-	document.getElementById('result').innerHTML = res;
+	var noun = document.getElementById("noun").value;
+	 var verb = document.getElementById("verb").value;
+	 var adjective = document.getElementById("adjective").value;
+	 var pronoun = document.getElementById("pronoun").value;
+	 var place = document.getElementById("place").value; 
+
+	 var myStr = res.replace("noun", noun);
+
+	document.getElementById('result').innerHTML = myStr;
 
 }
 	
