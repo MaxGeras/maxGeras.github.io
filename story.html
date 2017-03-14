@@ -4,7 +4,7 @@
 	<title>My Story</title>
 </head>
 <script type="text/javascript">
-
+var res = "";
 
 function readFile(elementId){
 
@@ -20,6 +20,8 @@ function readFile(elementId){
     document.getElementById("par2").style.visibility = "visible";
     document.getElementById("par3").style.visibility = "visible";
     document.getElementById("par4").style.visibility = "visible";
+    document.getElementById("story").style.visibility = "visible";
+    document.getElementById("story").innerHTML = "Display";
 
     if(window.XMLHttpRequest){
         xmlhttp = new XMLHttpRequest();
@@ -50,12 +52,13 @@ function replace(myStory)
 	 var pronoun = document.getElementById("pronoun").value;
 	 var place = document.getElementById("place").value;
 
-	 var res = str.replace("noun", noun);
+	 res = str.replace("noun", noun);
 	 res = str.replace("verb", verb);
 	 res = str.replace("adjective", adjective);
 	 res = str.replace("pronoun", pronoun);
 	 res = str.replace("place", place);
-	document.getElementById('result').innerHTML = res;
+
+
 }
 
 function ChangeColor(elementId)
@@ -83,6 +86,11 @@ function mUp(obj) {
 	obj.style.backgroundColor="DarkBlue";
 
 }
+
+function display()
+{
+	document.getElementById('result').innerHTML = res;
+}
 	
 </script>
 
@@ -108,8 +116,9 @@ Alice </div>
  <input type="text" name="adjective" id="adjective" style="visibility:hidden;">
 
 <p id="par4" style="visibility:hidden;">Pronoun : </p> 
-<input type="text" name="pronoun" id="pronoun" style="visibility:hidden;">
+<input type="text" name="pronoun" id="pronoun" style="visibility:hidden;"><br>
 
+<button style="visibility:hidden;" id="story" onclick="display()"></button> 
 
 <div id="result"><div>
 
