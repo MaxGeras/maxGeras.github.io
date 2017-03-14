@@ -52,12 +52,12 @@ function replace(myStory)
 	 var pronoun = document.getElementById("pronoun").value;
 	 var place = document.getElementById("place").value;
     
-	 res = myStory.replace("noun", noun);
-	 res = myStory.replace("verb", verb);
-	 res = myStory.replace("adjective", adjective);
-	 res = myStory.replace("pronoun", pronoun);
-	 res = myStory.replace("place", place);
-
+	 res = myStory;
+    /*
+	 res = myStory.replace(/noun/ig, noun)
+   				  .replace(/verb/ig, verb)
+   				  .replace(/adjective/ig, adjective);
+      */
 
 }
 
