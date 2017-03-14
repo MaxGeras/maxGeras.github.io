@@ -87,6 +87,10 @@ function display()
 	 var place = document.getElementById("place").value; 
 
 	 var myStr = res.replace("noun", noun);
+	 myStr = res.replace("verb", verb);
+	 myStr = res.replace("adjective", adjective);
+	 myStr = res.replace("pronoun", pronoun);
+	 myStr = res.replace("place", place);
 
 	document.getElementById('result').innerHTML = myStr;
 
