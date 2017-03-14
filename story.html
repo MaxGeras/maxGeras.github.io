@@ -31,6 +31,7 @@
 	}
 </style>
 <script type="text/javascript">
+
 var res = "";
 
 function readFile(elementId){
@@ -38,19 +39,7 @@ function readFile(elementId){
     var xmlhttp;
 
     resetData();
-    document.getElementById("noun").style.visibility = "visible";
-    document.getElementById("verb").style.visibility = "visible";
-    document.getElementById("adjective").style.visibility = "visible";
-    document.getElementById("pro").style.visibility = "visible";
-    document.getElementById("place").style.visibility = "visible";
-    
-    document.getElementById("par").style.visibility = "visible";
-    document.getElementById("par1").style.visibility = "visible";
-    document.getElementById("par2").style.visibility = "visible";
-    document.getElementById("par3").style.visibility = "visible";
-    document.getElementById("par4").style.visibility = "visible";
-    document.getElementById("story").style.visibility = "visible";
-    document.getElementById("story").innerHTML = "Display";
+    setData();
 
     if(window.XMLHttpRequest){
         xmlhttp = new XMLHttpRequest();
@@ -72,6 +61,22 @@ function readFile(elementId){
     xmlhttp.open("GET", text,true);
     xmlhttp.send();
 
+}
+
+
+function setData()
+{
+	document.getElementById("noun").style.visibility = "visible";
+    document.getElementById("verb").style.visibility = "visible";
+    document.getElementById("adjective").style.visibility = "visible";
+    document.getElementById("pro").style.visibility = "visible";
+    document.getElementById("place").style.visibility = "visible";
+    
+    document.getElementById("par").style.visibility = "visible";
+    document.getElementById("par1").style.visibility = "visible";
+    document.getElementById("par2").style.visibility = "visible";
+    document.getElementById("par3").style.visibility = "visible";
+    document.getElementById("par4").style.visibility = "visible";
 }
 function replace(myStory)
 {
@@ -136,6 +141,12 @@ function resetData()
 	document.getElementById('result').innerHTML = "";
 
 }	
+
+function displayButton(){
+
+    document.getElementById("story").style.visibility = "visible";
+    document.getElementById("story").innerHTML = "Display";
+}
 </script>
 
 <body>
@@ -147,25 +158,26 @@ function resetData()
 <div id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
 Alice </div>
 
+<form>
 <p id="par" style="visibility:hidden;">Noun : </p> 
-<input type="text" name="input" id="noun" style="visibility:hidden;"> 
+<input type="text" name="input" id="noun" style="visibility:hidden;" required > 
 
 <p id="par1" style="visibility:hidden;">Verb : </p>
- <input type="text" name="input" id="verb" style="visibility:hidden;">
+ <input type="text" name="input" id="verb" style="visibility:hidden;" required="">
 
 <p id="par2" style="visibility:hidden;">Place : </p> 
-<input type="text" name="input" id="place" style="visibility:hidden;">
+<input type="text" name="input" id="place" style="visibility:hidden;" required="">
 
 <p id="par3" style="visibility:hidden;">Adjective : </p>
- <input type="text" name="input" id="adjective" style="visibility:hidden;">
+ <input type="text" name="input" id="adjective" style="visibility:hidden;" required="">
 
 <p id="par4" style="visibility:hidden;">Pronoun : </p> 
-<input type="text" name="input" id="pro" style="visibility:hidden;"><br>
+<input type="text" name="input" id="pro" style="visibility:hidden;" oninput="displayButton()" required=""><br>
 
 <button style="visibility:hidden;" id="story" onclick="display()"></button> 
 
 <div class="myStory" id="result"><div>
-
+</form>
 
 </body>
 </html>
