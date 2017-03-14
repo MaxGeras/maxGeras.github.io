@@ -9,6 +9,8 @@ var res = "";
 function readFile(elementId){
 
     var xmlhttp;
+
+    resetData();
     document.getElementById("noun").style.visibility = "visible";
     document.getElementById("verb").style.visibility = "visible";
     document.getElementById("adjective").style.visibility = "visible";
@@ -95,7 +97,17 @@ function display()
 	document.getElementById('result').innerHTML = myStr;
 
 }
-	
+
+function resetData()
+{
+	document.getElementById("story").style.visibility = "hidden";
+	document.getElementById("noun").value = "";
+	document.getElementById("verb").value = "";
+	document.getElementById("adjective").value = "";
+	document.getElementById("pro").value = "";
+	document.getElementById("place").value = "";
+
+}	
 </script>
 
 <body>
