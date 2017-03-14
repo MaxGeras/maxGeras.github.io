@@ -86,11 +86,11 @@ function display()
 	 var pronoun = document.getElementById("pronoun").value;
 	 var place = document.getElementById("place").value; 
 
-	 var myStr = res.replace("noun", noun);
-	 myStr = res.replace("verb", verb);
-	 myStr = res.replace("adjective", adjective);
-	 myStr = res.replace("pronoun", pronoun);
-	 myStr = res.replace("place", place);
+	 var myStr = res.replace(/noun/ig, noun);
+					.replace(/verb/ig, verb)
+					.replace(/adjective/ig, adjective)
+	 				.replace(/pronoun/ig, pronoun)
+	 				.replace(/place/ig, place);
 
 	document.getElementById('result').innerHTML = myStr;
 
