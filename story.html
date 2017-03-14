@@ -13,6 +13,11 @@ function myStory()
 function readFile(elementId){
 
     var xmlhttp;
+    document.getElementById("noun").style.visibility = "visible";
+    document.getElementById("verb").style.visibility = "visible";
+    document.getElementById("adjective").style.visibility = "visible";
+    document.getElementById("pronoun").style.visibility = "visible";
+    document.getElementById("place").style.visibility = "visible";
 
     if(window.XMLHttpRequest){
         xmlhttp = new XMLHttpRequest();
@@ -61,6 +66,7 @@ function readFile(elementId){
             }
 	
 </script>
+
 <body onload="myStory()">
 
 <h1>Welcome to my story</h1>
@@ -69,11 +75,17 @@ function readFile(elementId){
 >Albert Einstein</div>
 <div id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
 Alice </div>
-<p id="par">Noun : </p> <input type="hidden" name="noun" id="noun"> 
-<p id="par">Verb : </p> <input type="hidden" name="verb" id="verb">
-<p id="par">Place : </p> <input type="hidden" name="place" id="place">
-<p id="par">Adjective : </p> <input type="hidden" name="adjective" id="adjective">
-<p id="par">Pronoun : </p> <input type="hidden" name="pronoun" id="pronoun">
+
+<p id="par">Noun : </p> 
+<input type="hidden" name="noun" id="noun"> 
+<p id="par">Verb : </p>
+ <input type="hidden" name="verb" id="verb">
+<p id="par">Place : </p> 
+<input type="hidden" name="place" id="place">
+<p id="par">Adjective : </p>
+ <input type="hidden" name="adjective" id="adjective">
+<p id="par">Pronoun : </p> 
+<input type="hidden" name="pronoun" id="pronoun">
 
 
 <div id="result"><div>
