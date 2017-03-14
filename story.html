@@ -159,12 +159,11 @@ function display()
 	 				.replace(/place/ig, place);
 
 	document.getElementById('result').innerHTML = myStr;
-	document.getElementById("result").focus();
+	document.getElementById('result').scrollIntoView();
 }
 
 function resetData()
 {
-	document.getElementById("result").blur();
 
 	document.getElementById("story").style.visibility = "hidden";
 	document.getElementById("noun").value = "";
