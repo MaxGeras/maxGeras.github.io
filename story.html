@@ -5,6 +5,11 @@
 </head>
 <script type="text/javascript">
 
+function myStory()
+{
+	document.getElementById("par").style.visibility = "hidden";
+}
+
 function readFile(elementId){
 
     var xmlhttp;
@@ -56,15 +61,23 @@ function readFile(elementId){
             }
 	
 </script>
-<body>
+<body onload="myStory()">
+
 <h1>Welcome to my story</h1>
 <p>Choose a story : </p>
 <div onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" id="albert" value="alber.txt" onclick="readFile(this.id)" 
 >Albert Einstein</div>
 <div id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
 Alice </div>
+<p id="par">Noun : </p> <input type="hidden" name="noun" id="noun"> 
+<p id="par">Verb : </p> <input type="hidden" name="verb" id="verb">
+<p id="par">Place : </p> <input type="hidden" name="place" id="place">
+<p id="par">Adjective : </p> <input type="hidden" name="adjective" id="adjective">
+<p id="par">Pronoun : </p> <input type="hidden" name="pronoun" id="pronoun">
+
 
 <div id="result"><div>
+
 
 </body>
 </html>
