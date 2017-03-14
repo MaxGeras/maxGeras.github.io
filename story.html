@@ -5,10 +5,6 @@
 </head>
 <script type="text/javascript">
 
-function myStory()
-{
-	document.getElementById("par").style.visibility = "hidden";
-}
 
 function readFile(elementId){
 
@@ -18,6 +14,12 @@ function readFile(elementId){
     document.getElementById("adjective").style.visibility = "visible";
     document.getElementById("pronoun").style.visibility = "visible";
     document.getElementById("place").style.visibility = "visible";
+    
+    document.getElementById("par").style.visibility = "visible";
+    document.getElementById("par1").style.visibility = "visible";
+    document.getElementById("par2").style.visibility = "visible";
+    document.getElementById("par3").style.visibility = "visible";
+    document.getElementById("par4").style.visibility = "visible";
 
     if(window.XMLHttpRequest){
         xmlhttp = new XMLHttpRequest();
@@ -30,7 +32,9 @@ function readFile(elementId){
 
     xmlhttp.onreadystatechange = function(){ 
         if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-            document.getElementById('result').innerHTML = xmlhttp.responseText;
+            var myStory = xmlhttp.responseText;
+            replace(myStory);
+           
         }
     }
     
@@ -38,32 +42,36 @@ function readFile(elementId){
     xmlhttp.send();
 
 }
+function replace(myStory)
+{
+	document.getElementById('result').innerHTML = xmlhttp.responseText;
+}
 
-           function ChangeColor(elementId)
-           {
+function ChangeColor(elementId)
+{
 
-           			document.getElementById(elementId).style.background = "Navy";
-  					document.getElementById(elementId).style.color = "White";
+			document.getElementById(elementId).style.background = "Navy";
+			document.getElementById(elementId).style.color = "White";
 
-           }
+}
 
-           function changeBack(elementId)
-           {
-      
-           			document.getElementById(elementId).style.background = "lightgrey";
-  					document.getElementById(elementId).style.color = "Black";
-     
-           }
+function changeBack(elementId)
+{
 
-	function mDown(obj) {
-   		   	   obj.style.backgroundColor = "Green";
-    		   
-			}
+			document.getElementById(elementId).style.background = "lightgrey";
+			document.getElementById(elementId).style.color = "Black";
 
-			function mUp(obj) {
-    			obj.style.backgroundColor="DarkBlue";
- 
-            }
+}
+
+function mDown(obj) {
+   	   obj.style.backgroundColor = "Green";
+   
+}
+
+function mUp(obj) {
+	obj.style.backgroundColor="DarkBlue";
+
+}
 	
 </script>
 
@@ -76,16 +84,20 @@ function readFile(elementId){
 <div id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
 Alice </div>
 
-<p id="par">Noun : </p> 
-<input type="hidden" name="noun" id="noun"> 
-<p id="par">Verb : </p>
- <input type="hidden" name="verb" id="verb">
-<p id="par">Place : </p> 
-<input type="hidden" name="place" id="place">
-<p id="par">Adjective : </p>
- <input type="hidden" name="adjective" id="adjective">
-<p id="par">Pronoun : </p> 
-<input type="hidden" name="pronoun" id="pronoun">
+<p id="par" style="visibility:hidden;">Noun : </p> 
+<input type="text" name="noun" id="noun" style="visibility:hidden;"> 
+
+<p id="par1" style="visibility:hidden;">Verb : </p>
+ <input type="text" name="verb" id="verb" style="visibility:hidden;">
+
+<p id="par2" style="visibility:hidden;">Place : </p> 
+<input type="text" name="place" id="place" style="visibility:hidden;">
+
+<p id="par3" style="visibility:hidden;">Adjective : </p>
+ <input type="text" name="adjective" id="adjective" style="visibility:hidden;">
+
+<p id="par4" style="visibility:hidden;">Pronoun : </p> 
+<input type="text" name="pronoun" id="pronoun" style="visibility:hidden;">
 
 
 <div id="result"><div>
