@@ -19,18 +19,19 @@
  	text-align: center;
  	font-size: 25px;
  }
-	.myStory{
-		color: DarkBlue;
-		text-align: center;
-        font-size: 30px;
-        margin: auto;
-	}
 
-	.input{
-       text-align: center;
-	}
+.myStory{
+	color: DarkBlue;
+	text-align: center;
+    font-size: 30px;
+    margin: auto;
+}
 
-	.button
+.input{
+      text-align: center;
+}
+
+.button
 {
 	background-color: DarkBlue; /* Green */
     border: none;
@@ -60,6 +61,7 @@
     color: white;
 }
 </style>
+
 <script type="text/javascript">
 
 var res = "";
@@ -119,21 +121,21 @@ function replace(myStory)
 function ChangeColor(elementId)
 {
 
-			document.getElementById(elementId).style.background = "Navy";
-			document.getElementById(elementId).style.color = "White";
+	document.getElementById(elementId).style.background = "Navy";
+	document.getElementById(elementId).style.color = "White";
 
 }
 
 function changeBack(elementId)
 {
 
-			document.getElementById(elementId).style.background = "lightgrey";
-			document.getElementById(elementId).style.color = "Black";
+	document.getElementById(elementId).style.background = "lightgrey";
+	document.getElementById(elementId).style.color = "Black";
 
 }
 
 function mDown(obj) {
-   	   obj.style.backgroundColor = "Green";
+   	obj.style.backgroundColor = "Green";
    
 }
 
@@ -145,12 +147,12 @@ function mUp(obj) {
 function display()
 {
 	var noun = document.getElementById("noun").value;
-	 var verb = document.getElementById("verb").value;
-	 var adjective = document.getElementById("adjective").value;
-	 var pro = document.getElementById("pro").value;
-	 var place = document.getElementById("place").value; 
+	var verb = document.getElementById("verb").value;
+	var adjective = document.getElementById("adjective").value;
+	var pro = document.getElementById("pro").value;
+	var place = document.getElementById("place").value; 
 
-	 var myStr = res.replace(/noun/ig, noun)
+	var myStr = res.replace(/noun/ig, noun)
 					.replace(/verb/ig, verb)
 					.replace(/adjective/ig, adjective)
 	 				.replace(/pro/ig, pro)
