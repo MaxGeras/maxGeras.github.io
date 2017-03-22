@@ -4,4 +4,8 @@ verb assistant noun. In the Swiss patent office and attended
 the University of Zurich. There he began studying atoms, molecules,
 and _pro. He developed the theory of
 place relativity, which expanded the phenomena of sub-atomic
+<<<<<<< HEAD
  and magnetism.  We are proactive _pro.
+=======
+ and magnetism. procool prostuff
+>>>>>>> 96a09413f9e5a0d6aa9fedcef2af3a68a5c359ee
