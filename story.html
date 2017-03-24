@@ -155,7 +155,7 @@ function display()
 	var verb = document.getElementById("_verb").value.bold();
 	var adjective = document.getElementById("_adjective").value.bold();
 	var _pro = document.getElementById("_pro").value.bold();
-	var place = document.getElementById("place").value.bold(); 
+	var place = document.getElementById("_place").value.bold(); 
 
 	var myStr = res.replace(/_noun/ig, noun)
 					.replace(/_verb/ig, verb)
@@ -217,7 +217,7 @@ Alice </div>
 <input type="text" name="input" id="_place" onfocus="myFunction1(this)" style="visibility:hidden;" required>
 
 <p id="par3" style="visibility:hidden;">Adjective : </p>
- <input type="text" name="input" id="_adjective" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+ <input type="text" name="input" id="_proadjective" onfocus="myFunction1(this)" style="visibility:hidden;" required>
 
 <p id="par4" style="visibility:hidden;">Pronoun : </p> 
 <input type="text" name="input" id="_pro" style="visibility:hidden;" onfocus="myFunction1(this)" oninput="displayButton()" required><br>
