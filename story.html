@@ -131,6 +131,7 @@ function setData()
     document.getElementById("par2").style.visibility = "visible";
     document.getElementById("par3").style.visibility = "visible";
     document.getElementById("par4").style.visibility = "visible";
+    document.getElementById('result').style.background = "transparent";
 }
 function replace(myStory)
 {
@@ -183,6 +184,7 @@ function display()
 	 				.replace(/_place/ig, place);
 
 	document.getElementById('result').innerHTML = myStr;
+    document.getElementById('result').style.background = "LightBlue";
 	document.getElementById('result').scrollIntoView();
 }
 
@@ -204,6 +206,7 @@ function resetData()
 	document.getElementById("_adjective").style.background = "white";
 	document.getElementById("_pro").style.background = "white";
 	document.getElementById("_place").style.background = "white";
+     document.getElementById('result').style.background = "transparent";
 
 }	
 
