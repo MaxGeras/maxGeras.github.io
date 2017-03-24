@@ -103,11 +103,11 @@ function readFile(elementId){
 
 function setData()
 {
-	document.getElementById("noun").style.visibility = "visible";
-    document.getElementById("verb").style.visibility = "visible";
-    document.getElementById("adjective").style.visibility = "visible";
+	document.getElementById("_noun").style.visibility = "visible";
+    document.getElementById("_verb").style.visibility = "visible";
+    document.getElementById("_adjective").style.visibility = "visible";
     document.getElementById("_pro").style.visibility = "visible";
-    document.getElementById("place").style.visibility = "visible";
+    document.getElementById("_place").style.visibility = "visible";
     
     document.getElementById("par").style.visibility = "visible";
     document.getElementById("par1").style.visibility = "visible";
@@ -151,17 +151,17 @@ function mUp(obj) {
 
 function display()
 {
-	var noun = document.getElementById("noun").value;
-	var verb = document.getElementById("verb").value;
-	var adjective = document.getElementById("adjective").value;
-	var _pro = document.getElementById("_pro").value;
-	var place = document.getElementById("place").value; 
+	var noun = document.getElementById("_noun").value.bold();
+	var verb = document.getElementById("_verb").value.bold();
+	var adjective = document.getElementById("_adjective").value.bold();
+	var _pro = document.getElementById("_pro").value.bold();
+	var place = document.getElementById("place").value.bold(); 
 
-	var myStr = res.replace(/noun/ig, noun)
-					.replace(/verb/ig, verb)
-					.replace(/adjective/ig, adjective)
+	var myStr = res.replace(/_noun/ig, noun)
+					.replace(/_verb/ig, verb)
+					.replace(/_adjective/ig, adjective)
 	 				.replace(/_pro/ig, _pro)
-	 				.replace(/place/ig, place);
+	 				.replace(/_place/ig, place);
 
 	document.getElementById('result').innerHTML = myStr;
 	document.getElementById('result').scrollIntoView();
@@ -173,17 +173,17 @@ function resetData()
 	document.getElementById("story").style.visibility = "hidden";
 	
 	
-	document.getElementById("verb").value = "";
-	document.getElementById("adjective").value = "";
+	document.getElementById("_verb").value = "";
+	document.getElementById("_adjective").value = "";
 	document.getElementById("_pro").value = "";
-	document.getElementById("place").value = "";
+	document.getElementById("_place").value = "";
 	document.getElementById('result').innerHTML = "";
 
-	document.getElementById("noun").style.background = "white";
-	document.getElementById("verb").style.background = "white";
-	document.getElementById("adjective").style.background = "white";
+	document.getElementById("_noun").style.background = "white";
+	document.getElementById("_verb").style.background = "white";
+	document.getElementById("_adjective").style.background = "white";
 	document.getElementById("_pro").style.background = "white";
-	document.getElementById("place").style.background = "white";
+	document.getElementById("_place").style.background = "white";
 
 }	
 
@@ -208,16 +208,16 @@ function myFunction1(elementId){
 Alice </div>
 
 <p id="par" style="visibility:hidden;">Noun : </p> 
-<input type="text" name="input" id="noun" onfocus="myFunction1(this)" style="visibility:hidden;" required > 
+<input type="text" name="input" id="_noun" onfocus="myFunction1(this)" style="visibility:hidden;" required > 
 
 <p id="par1" style="visibility:hidden;">Verb : </p>
- <input type="text" name="input" id="verb" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+ <input type="text" name="input" id="_verb" onfocus="myFunction1(this)" style="visibility:hidden;" required>
 
 <p id="par2" style="visibility:hidden;">Place : </p> 
-<input type="text" name="input" id="place" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+<input type="text" name="input" id="_place" onfocus="myFunction1(this)" style="visibility:hidden;" required>
 
 <p id="par3" style="visibility:hidden;">Adjective : </p>
- <input type="text" name="input" id="adjective" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+ <input type="text" name="input" id="_adjective" onfocus="myFunction1(this)" style="visibility:hidden;" required>
 
 <p id="par4" style="visibility:hidden;">Pronoun : </p> 
 <input type="text" name="input" id="_pro" style="visibility:hidden;" onfocus="myFunction1(this)" oninput="displayButton()" required><br>
