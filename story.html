@@ -6,23 +6,31 @@
 
 <style type="text/css">
  html{
- 	background-color: WhiteSmoke;
+ 	  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzU8xRs8dI8cuHuZMqs8g_XZMXXjgkQFZoUK9rHX-33wOuhJxZSQ) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
  }
 
  p{
- 	color: DarkBlue;
+ 	color: blue;
  	font-size: 30px;
  	font-weight: 700;
+    font-family: "Comic Sans MS", cursive, sans-serif;
  }
 
  div{
  	color: blue;
  	text-align: center;
  	font-size: 25px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+
  }
 
  .center{
  	text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;  
  }
 
 .myStory{
@@ -30,10 +38,12 @@
 	text-align: center;
     font-size: 30px;
     margin: auto;
+    width: 45%;
 }
 
 .input{
       text-align: center;
+      font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .button
@@ -49,21 +59,28 @@
     cursor: pointer;
     margin: auto;
     padding: 14px 40px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .button2 {
-    background-color: Aquamarine; 
+    background-color: MediumBlue; 
     color: black; 
     border: 2px solid #008CBA;
     margin-left: 40%;
     width: 20%;
-    border: 3px solid Lime;
+    border: 3px solid DodgerBlue;
     padding: 5px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .button2:hover {
-    background-color: Lime;
+    background-color: DodgerBlue;
     color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#albert, #alice{
+  margin: 0 auto;
 }
 </style>
 
@@ -128,6 +145,7 @@ function ChangeColor(elementId)
 
 	document.getElementById(elementId).style.background = "Navy";
 	document.getElementById(elementId).style.color = "White";
+    document.getElementById(elementId).style.width = "25%";
 
 }
 
@@ -136,6 +154,7 @@ function changeBack(elementId)
 
 	document.getElementById(elementId).style.background = "lightgrey";
 	document.getElementById(elementId).style.color = "Black";
+    document.getElementById(elementId).style.width = "25%";
 
 }
 
@@ -190,11 +209,11 @@ function resetData()
 function displayButton(){
 
     document.getElementById("story").style.visibility = "visible";
-    document.getElementById("story").innerHTML = "Display";
+    document.getElementById("story").innerHTML = "Display My Story";
 }
 
 function myFunction1(elementId){
-	 elementId.style.background = "Moccasin";
+	 elementId.style.background = "LightSkyBlue";
 }
 </script>
 
@@ -206,7 +225,8 @@ function myFunction1(elementId){
 >Albert Einstein</div>
 <div id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
 Alice </div>
-
+<hr>
+<div style="text-align: center;">
 <p id="par" style="visibility:hidden;">Noun : </p> 
 <input type="text" name="input" id="_noun" onfocus="myFunction1(this)" style="visibility:hidden;" required > 
 
@@ -221,6 +241,9 @@ Alice </div>
 
 <p id="par4" style="visibility:hidden;">Pronoun : </p> 
 <input type="text" name="input" id="_pro" style="visibility:hidden;" onfocus="myFunction1(this)" oninput="displayButton()" required><br>
+</div>
+<br>
+<br>
 
 <button class="button button2" style="visibility:hidden;" id="story" onclick="display()"></button> 
 
