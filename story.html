@@ -151,11 +151,11 @@ function mUp(obj) {
 
 function display()
 {
-	var noun = document.getElementById("_noun").value.bold();
-	var verb = document.getElementById("_verb").value.bold();
-	var adjective = document.getElementById("_adjective").value.bold();
-	var _pro = document.getElementById("_pro").value.bold();
-	var place = document.getElementById("_place").value.bold(); 
+	var noun = document.getElementById("_noun").value.bold().sup();
+	var verb = document.getElementById("_verb").value.bold().sup();
+	var adjective = document.getElementById("_adjective").value.bold().sup();
+	var _pro = document.getElementById("_pro").value.bold().sup();
+	var place = document.getElementById("_place").value.bold().sup(); 
 
 	var myStr = res.replace(/_noun/ig, noun)
 					.replace(/_verb/ig, verb)
