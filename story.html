@@ -206,8 +206,8 @@ function replace(myStory, idName)
 
     	if(myStory.stories[i].storyName === idName)
    		{
-        	res += myStory.stories[i].content;
-        	break; 
+        	res = myStory.stories[i].content;
+        	
     	}
     	else
     	{ 
@@ -217,7 +217,7 @@ function replace(myStory, idName)
 
 consol.log(res);
 consol.log("I am reading a JSON file");
-  display(res);
+ 
 
 }
 
