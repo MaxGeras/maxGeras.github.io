@@ -154,11 +154,13 @@ function readFile(elementId){
    
     var text = document.getElementById(elementId).getAttribute('value');
     var idName = document.getElementById(elementId).id;
-
+   
+   consol.log(text);
+   consol.log(idName);
     xmlhttp.onreadystatechange = function(){ 
         if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-            var myJson = JSON.parse(xmlhttp.responseText);
-            replace(myJson, idName);
+            var myStory = JSON.parse(xmlhttp.responseText);
+            //replace(myStory, idName);
            
         }
     }
