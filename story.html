@@ -136,7 +136,6 @@
 
 <script type="text/javascript">
 
-var res = "";
 
 function readFile(elementId){
 
@@ -153,11 +152,12 @@ function readFile(elementId){
     
    
     var text = document.getElementById(elementId).getAttribute('value');
+    var idName = document.getElementById(elementId).id;
 
     xmlhttp.onreadystatechange = function(){ 
         if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-            var myStory = xmlhttp.responseText;
-            replace(myStory);
+            var myJson = JSON.parse(xmlhttp.responseText);
+            replace(myJson, idName);
            
         }
     }
@@ -195,11 +195,26 @@ function setData(elementId)
     document.getElementById("div3").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinLS5Rsl3ZimRHmXhi-ZyF97sbl1cSHKvIs2qjhRnNSiJaHa9bg')";
     }
 }
-function replace(myStory)
+function replace(myStory, idName)
 {
  
-	 res = myStory;
+   var res ="";
+   var i = 0;
+    
+    while(i < myStory.stories.length){
 
+    	if(myStory.stories[i].storyName === idName)
+   		{
+        	res += myStory.stories[i].content;
+        	break; 
+    	}
+    	else
+    	{ 
+        	i++;
+        } 
+    }
+
+  display(res);
 
 }
 
@@ -231,7 +246,7 @@ function mUp(obj) {
 
 }
 
-function display()
+function display(res)
 {
 	var noun = document.getElementById("_noun").value.bold().sup().fontcolor("white");
 	var verb = document.getElementById("_verb").value.bold().sup().fontcolor("white");
@@ -289,9 +304,11 @@ function myFunction1(elementId){
         frameborder="0" style="visibility: hidden;" allowfullscreen></iframe>
 <h1 class="center">Welcome to a story</h1>
 <p class="center">Choose your story : </p>
-<div onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" id="albert" value="alber.txt" onclick="readFile(this.id)" 
+<div onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" id="albert" value="stories.txt" 
+onclick="readFile(this.id)" 
 >Albert Einstein</div>
-<div id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
+<div id="alice" value="stories.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" 
+onmouseleave="changeBack(this.id)">
 Alice </div>
 <hr>
 <div style="width: 100%">
