@@ -136,6 +136,7 @@
 
 <script type="text/javascript">
 
+ var res ="";
 
 function readFile(elementId){
 
@@ -198,7 +199,7 @@ function setData(elementId)
 function replace(myStory, idName)
 {
  
-   var res ="";
+  
    var i = 0;
     
     while(i < myStory.stories.length){
@@ -214,6 +215,8 @@ function replace(myStory, idName)
         } 
     }
 
+consol.log(res);
+consol.log("I am reading a JSON file");
   display(res);
 
 }
@@ -246,7 +249,7 @@ function mUp(obj) {
 
 }
 
-function display(res)
+function display()
 {
 	var noun = document.getElementById("_noun").value.bold().sup().fontcolor("white");
 	var verb = document.getElementById("_verb").value.bold().sup().fontcolor("white");
