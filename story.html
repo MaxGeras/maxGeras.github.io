@@ -256,16 +256,16 @@ function display()
 
 
     var myObjStr = JSON.stringify(res);
-	var myStr = myObjStr.replace(/_noun/ig, noun)
+	var myNewStory = myObjStr.replace(/_noun/ig, noun)
 					.replace(/_verb/ig, verb)
 					.replace(/_adjective/ig, adjective)
 	 				.replace(/_pro/ig, pronoun)
 	 				.replace(/_place/ig, place);
 
-   	myStr = myStr.replace("[","");
-   	myStr = myStr.replace("]","");
+   	myNewStory = myNewStory.replace("[","")
+   	             .replace("]","");
 
-	document.getElementById('result').innerHTML = myStr;
+	document.getElementById('result').innerHTML = myNewStory;
     document.getElementById('result').style.background = "LightBlue";
 	document.getElementById('result').scrollIntoView();
 
