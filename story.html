@@ -154,9 +154,9 @@ function readFile(elementId){
    
     var text = document.getElementById(elementId).getAttribute('value');
     var idName = document.getElementById(elementId).id;
-   
-   window.consol(text);
-   window.consol(idName);
+   document.getElementById('result').innerHTML = text + idName; 
+   consol.log(text);
+   consol.log(idName);
     xmlhttp.onreadystatechange = function(){ 
         if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
             var myStory = JSON.parse(xmlhttp.responseText);
