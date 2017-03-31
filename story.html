@@ -263,6 +263,7 @@ function display()
 	 				.replace(/_place/ig, place);
 
    	myStr = myStr.replace("[","");
+   	myStr = myStr.replace("]","");
 
 	document.getElementById('result').innerHTML = myStr;
     document.getElementById('result').style.background = "LightBlue";
