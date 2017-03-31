@@ -258,7 +258,7 @@ function display()
 	 				.replace(/_place/ig, place)
 	 				.replace("[","")
    	                .replace("]","")
-   	                .replace("\"","");
+   	                .replace(/\"/g,"");
 
 	document.getElementById('result').innerHTML = myNewStory;
     document.getElementById('result').style.background = "LightBlue";
