@@ -199,7 +199,7 @@ function setData(elementId)
 function replace(myStory, idName)
 { 
    var i = 0;
-      
+
    while(i < myStory.stories.length){
   
     	if(myStory.stories[i].storyName === idName)
@@ -255,10 +255,10 @@ function display()
 					.replace(/_verb/ig, verb)
 					.replace(/_adjective/ig, adjective)
 	 				.replace(/_pro/ig, pronoun)
-	 				.replace(/_place/ig, place);
-
-   	myNewStory = myNewStory.replace("[","")
-   	                       .replace("]","");
+	 				.replace(/_place/ig, place)
+	 				.replace("[","")
+   	                .replace("]","")
+   	                .replace("\"","");
 
 	document.getElementById('result').innerHTML = myNewStory;
     document.getElementById('result').style.background = "LightBlue";
@@ -270,8 +270,6 @@ function resetData()
 {
 
 	document.getElementById("story").style.visibility = "hidden";
-	
-	
 	document.getElementById("_verb").value = "";
 	document.getElementById("_adjective").value = "";
 	document.getElementById("_pro").value = "";
@@ -284,7 +282,7 @@ function resetData()
 	document.getElementById("_adjective").style.background = "white";
 	document.getElementById("_pro").style.background = "white";
 	document.getElementById("_place").style.background = "white";
-     document.getElementById('result').style.background = "transparent";
+    document.getElementById('result').style.background = "transparent";
 
 }	
 
