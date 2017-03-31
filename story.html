@@ -197,25 +197,19 @@ function setData(elementId)
     }
 }
 function replace(myStory, idName)
-{
- 
-  
+{ 
    var i = 0;
-    
-  
-    while(i < myStory.stories.length){
+      
+   while(i < myStory.stories.length){
   
     	if(myStory.stories[i].storyName === idName)
    		{
         	res = myStory.stories[i].content;
-        	
+        	break;
     	}
 
-        	i++;
-           
+        i++;   
     }
-
-
 }
 
 function ChangeColor(elementId)
@@ -256,6 +250,7 @@ function display()
 
 
     var myObjStr = JSON.stringify(res);
+
 	var myNewStory = myObjStr.replace(/_noun/ig, noun)
 					.replace(/_verb/ig, verb)
 					.replace(/_adjective/ig, adjective)
@@ -263,7 +258,7 @@ function display()
 	 				.replace(/_place/ig, place);
 
    	myNewStory = myNewStory.replace("[","")
-   	             .replace("]","");
+   	                       .replace("]","");
 
 	document.getElementById('result').innerHTML = myNewStory;
     document.getElementById('result').style.background = "LightBlue";
