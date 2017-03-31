@@ -254,7 +254,7 @@ function display()
 	var pronoun = document.getElementById("_pro").value.bold().sup().fontcolor("white");
 	var place = document.getElementById("_place").value.bold().sup().fontcolor("white"); 
 
-  document.getElementById('result').innerHTML = res;
+	document.getElementById('result').innerHTML = noun + place + pronoun + adjective;
 	var myStr = res.replace(/_noun/ig, noun)
 					.replace(/_verb/ig, verb)
 					.replace(/_adjective/ig, adjective)
