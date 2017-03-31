@@ -274,7 +274,9 @@ function display()
 					.replace(/_verb/ig, verb)
 					.replace(/_adjective/ig, adjective)
 	 				.replace(/_pro/ig, pronoun)
-	 				.replace(/_place/ig, place);
+	 				.replace(/_place/ig, place)
+	 				.replace(/"["/ig, " ")
+	 				.replace(/"]"/ig, " ");
     
 
 	document.getElementById('result').innerHTML = myStr;
