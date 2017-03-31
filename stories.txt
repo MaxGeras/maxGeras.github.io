@@ -1,14 +1,14 @@
 {"stories":[
     { 
 	"storyName":"albert", 
-	"content": ["Albert Einstein, the son of _noun and _adjective, was born in Ulm, Germany, in 1879. In 1902, he had a job _verb assistant _noun. In the Swiss patent office and attended", 
-	" the University of Zurich. There he began studying atoms , molecules, and _pro. He developed the theory of place relativity, which expanded the phenomena of sub-atomic",	
- 	" and magnetism.  We are proactive _pro."] 
+	"content": ["Albert Einstein, the son of _noun and _adjective, was born in Ulm, Germany, in 1879. In 1902, he had a job _verb assistant _noun. In the Swiss patent office and attended " , 
+	" the University of Zurich. There he began studying atoms , molecules, and _pro. He developed the theory of place relativity, which expanded the phenomena of sub-atomic " ,	
+ 	" and magnetism.  We are proactive _pro. "] 
        },
     { 
 	"storyName":"alice", 
-	"content": ["Lewis Caroll's classic, Alice's Adventures in Wonderland, as well as its _noun, Through the Looking _verb,",
-	" have enchanted both the young and the old _adjective. for the last _place years. Alice's adventures begin when she _pro down a hole and lands",
- 	" in a strange and topsy-turvy."] 
+	"content": ["Lewis Caroll's classic, Alice's Adventures in Wonderland, as well as its _noun, Through the Looking _verb, " ,
+	" have enchanted both the young and the old _adjective. for the last _place years. Alice's adventures begin when she _pro down a hole and lands " ,
+ 	" in a strange and topsy-turvy. "] 
 	}
 ]}
