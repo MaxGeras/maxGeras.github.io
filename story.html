@@ -13,12 +13,21 @@
   background-size: cover;
  }
 
- p{
+ #intro{
+ 	color: Indigo;
+ 	font-size: 30px;
+ 	font-weight: 700;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+ }
+
+  p{
  	color: blue;
  	font-size: 30px;
  	font-weight: 700;
     font-family: "Comic Sans MS", cursive, sans-serif;
  }
+
+
 
  div{
  	color: blue;
@@ -79,7 +88,25 @@
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
+.button3 {
+    background-color: LightSkyBlue; 
+    color: black; 
+    border: 2px solid #008CBA;
+    margin: auto;
+    width: 20%;
+    border: 3px solid DodgerBlue;
+    padding: 5px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button3:hover {
+    background-color: DeepSkyBlue;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 #albert, #alice, #fenrir{
+	color: SlateBlue;
   margin: 0 auto;
 }
 
@@ -149,37 +176,29 @@
  var res ="";
 
 
-function storeUsername() 
+function storeUsername(myUser) 
 {
     if (window.localStorage)
     {
-        var txtUsername = document.getElementById('inputUser');
-        
-        txtUsername.value = localStorage.getItem('username');
-        
-        txtUsername.addEventListener('input', function()
-        {
-            localStorage.setItem('username', txtUsername.value);
-        }, false);
+          
+        localStorage.setItem('username', myUser);
+   
     }
     else
     {
         window.alert('Local Storage is not supported by your browser!');
     }
-
-    return txtUsername;
 }
 
 function welcomeUser()
 {
-    storeUsername();
+	 var txtUsername = document.getElementById("inputUser").value;
+
+    storeUsername(txtUsername);
     
-    var txtUsername = localStorage.username;
     
     var message = '<p class="center">Welcome to the ad lib game, ';
-    message += txtUsername + '! Please choose a story!</p>'; // TODO: Test the local storage call.
-    
- 
+    message += txtUsername + '! <br><br> Please choose a story!</p>'; // TODO: Test the local storage call.
     
     
     document.getElementById('welcome').style.display = "none"; 
@@ -364,13 +383,13 @@ function myFunction1(elementId){
         frameborder="0" style="visibility: hidden;" allowfullscreen></iframe>
 <h1 id="userData"></h1>
        <div id="welcome">
-            <h2>Welcome!</h2>
+            <h2 id="intro">Welcome!</h2>
             
-            <p>Enter your name to get started!</p>
+            <p id="intro">Enter your name to get started!</p>
             
             
-            <p>Username: <input id="inputUser" type="text" name="username" size="15" maxlength="30" /></p>
-            <button name="submit" value="Submit!" onclick="welcomeUser()">Submit!</button>
+            <p id="intro">Username: <input id="inputUser" type="text" name="username" size="15" maxlength="30" /></p>
+            <button class="button button3" name="submit" value="Submit!" onclick="welcomeUser()">Submit!</button>
             
        </div>
 
