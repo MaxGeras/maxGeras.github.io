@@ -166,7 +166,7 @@ function storeUsername()
     {
         window.alert('Local Storage is not supported by your browser!');
     }
-    window.alert(txtUsername.value);
+
     return txtUsername;
 }
 
@@ -179,7 +179,7 @@ function welcomeUser()
     var message = '<p class="center">Welcome to the ad lib game, ';
     message += txtUsername + '! Please choose a story!</p>'; // TODO: Test the local storage call.
     
-    window.alert(message);
+ 
     
     
     document.getElementById('welcome').style.display = "none"; 
