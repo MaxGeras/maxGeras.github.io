@@ -79,7 +79,7 @@
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-#albert, #alice{
+#albert, #alice, #fenrir{
   margin: 0 auto;
 }
 
@@ -93,6 +93,14 @@
     height: 400px;
     text-align: center;
 }
+
+ #welcome {
+     margin: 20px;
+     padding: 20px;
+     background-color: grey;
+     border-style: solid;
+     border-color: black;
+ }
 
 
 
@@ -136,7 +144,54 @@
 
 <script type="text/javascript">
 
+
+
  var res ="";
+
+
+function storeUsername() 
+{
+    if (window.localStorage)
+    {
+        var txtUsername = document.getElementById('inputUser');
+        
+        txtUsername.value = localStorage.getItem('username');
+        
+        txtUsername.addEventListener('input', function()
+        {
+            localStorage.setItem('username', txtUsername.value);
+        }, false);
+    }
+    else
+    {
+        window.alert('Local Storage is not supported by your browser!');
+    }
+    window.alert(txtUsername.value);
+    return txtUsername;
+}
+
+function welcomeUser()
+{
+    storeUsername();
+    
+    var txtUsername = localStorage.username;
+    
+    var message = '<p class="center">Welcome to the ad lib game, ';
+    message += txtUsername + '! Please choose a story!</p>'; // TODO: Test the local storage call.
+    
+    window.alert(message);
+    
+    
+    document.getElementById('welcome').style.display = "none"; 
+    document.getElementById('alice').style.visibility = "visible"; 
+    document.getElementById('albert').style.visibility = "visible"; 
+    document.getElementById('fenrir').style.visibility = "visible";
+    document.getElementById('userData').innerHTML = message;
+    
+}
+
+
+
 
 function readFile(elementId){
 
@@ -300,14 +355,28 @@ function myFunction1(elementId){
 <body id="snow">
 <iframe width="0" height="0" src="https://www.youtube.com/embed/5AnkytyIdMw?autoplay=1" 
         frameborder="0" style="visibility: hidden;" allowfullscreen></iframe>
-<h1 class="center">Welcome to a story</h1>
-<p class="center">Choose your story : </p>
+<h1 id="userData"></h1>
+       <div id="welcome">
+            <h2>Welcome!</h2>
+            
+            <p>Enter your name to get started!</p>
+            
+            
+            <p>Username: <input id="inputUser" type="text" name="username" size="15" maxlength="30" /></p>
+            <button name="submit" value="Submit!" onclick="welcomeUser()">Submit!</button>
+            
+       </div>
+
+
 <div onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" id="albert" value="stories.txt" 
-onclick="readFile(this.id)" 
+onclick="readFile(this.id)" style="visibility: hidden;"
 >Albert Einstein</div>
 <div id="alice" value="stories.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" 
-onmouseleave="changeBack(this.id)">
+onmouseleave="changeBack(this.id)" style="visibility: hidden;">
 Alice </div>
+<div id="fenrir" value="stories.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" 
+onmouseleave="changeBack(this.id)" style="visibility: hidden;">
+Fenrir </div>
 <hr>
 <div style="width: 100%">
  <div style="float: left; width: 30%;" id="div1"></div>
